@@ -1,0 +1,40 @@
+ Angular Coding Assesment (Used most recent Angular version 13.0):
+
+	Completed:
+
+		Email:
+			Required and is an email address input field
+			Displays a warning below if not valid and touched
+			Displays a warning above with all other warnings at the top of the form
+	
+		Password:
+			
+			Required and is a password input field
+			Dispalys a warning below if not valid and touched
+			Displays a warning above with all other warnings at the top of the form
+
+		Status Level:
+			
+			User can select from 3 levels ("Executive Platinum", "Platinum Pro", "Platinum")
+			Dispalys a warning below if not valid and touched
+			Displays a warning above with all other warnings at the top of the form
+
+		Clear:
+			If clear is clicked, the user is asked to confirm their choice and upon clicking okay, the form is reset
+			
+		Buttons:
+			A submit and a clear button have been added
+
+	Not Completed:
+		
+		Submit button:
+				I tried using route and navigation to take the user to another page with the display
+				of their input. But I was not able to get it to work and I am not sure where I went wrong.
+
+
+
+ Java files and hire() method:
+	
+		I implemented a recursive helper method and I believe I got the necessary Position from the title parameter.
+		I did not use unit testing but a series of print statements to track what my method was doing and what it was grabbing.
+		I realize my code and testing methods can be improved on and will continue to do so after submission.
