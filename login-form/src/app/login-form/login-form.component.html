@@ -1,0 +1,44 @@
+<form id="loginForm" (ngSubmit)="onSubmit()">
+    
+    <div class="warnings" *ngIf="email.touched && !email.valid">Email is invalid</div>
+    <div class="warnings" *ngIf="password.touched && !password.valid">Password is invalid</div>
+    <div class="warnings" *ngIf="statusLevel.touched && !statusLevel.valid">Choose a Status Level</div>
+    <br>
+
+    <div class="input-wrapper">
+
+      <div class="form-group">
+        <label for="email">Email: </label>
+        <input required ngModel name="email" #email="ngModel" (change)="log(email)" id="email"
+        title="Must have characters before and after --> @ and ."
+        type="email" class="form-control" email>
+      </div>
+      <div id="email-warning" class="alert alert-danger" *ngIf="email.touched && !email.valid">Email is required</div>
+      <br>
+      
+      <div class="form-group">
+        <label for="password">Password: </label>
+        <input required ngModel name="password" #password = "ngModel" change="log(password)" id="password" 
+        pattern="(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8}"
+        title="Password must be atleast 8 characters long, one character, and one special character" 
+        type="password" class="form-control">
+      </div>
+      <div id="password-warning" class="alert alert-danger" *ngIf="password.touched && !password.valid">Password is required</div>
+      <br>
+      
+
+      <div class="form-group">
+        <label for="statusLevel">Status Level: </label>
+        <select required ngModel name="statusLevel" #statusLevel = "ngModel" (change)=update($event) id="statusLevel" class="form-control">
+          <option value="" selected="selected" hidden>Select a Status</option>
+          <option *ngFor="let status of Status" [ngValue] ="status">{{status}}</option>
+          </select>
+      </div>
+      <div class="alert alert-danger" *ngIf="!statusLevel.valid && statusLevel.touched"> Please Select a Status</div>
+      <br>
+      
+
+      <button routerLink="/userInfo" id="submitButton" type="submit" [disabled]="!email.valid || !password.valid || !statusLevel.valid" class="btn btn-primary">Submit</button>
+      <button id="clearButton" (click)="clearConfirmation()" class="btn btn-primary">Clear</button><br><br>
+    </div>
+  </form>

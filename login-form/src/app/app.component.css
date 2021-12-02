@@ -1,0 +1,24 @@
+.container
+{
+    margin: auto;
+    padding: auto;
+    position: fixed;
+    width: 30em;
+    top:25%;
+    left:35%;
+    background-color: grey;
+    border-radius: 25px;
+}
+
+#logo
+{
+    background-image: url(../assets/images/aa-logo.png);
+    background-repeat: no-repeat;
+
+    background-size: 100% 100%;
+    z-index: 1;
+    padding: 10%;
+    margin: auto 20px;
+    
+}
+

@@ -1,0 +1,27 @@
+label
+{
+    display: inline-block;
+    text-align: right;
+    width: 6em;
+    margin: auto;
+}
+
+.alert, .warnings
+{
+    color: red;
+    text-align: center;
+}
+
+.input-wrapper
+{
+    display: inline-block;
+    margin-left: 18%;
+}
+
+#submitButton
+{
+    display: inline-block;
+    margin-left: 40%;
+    margin-right: 2%;
+}
+
